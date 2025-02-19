@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Sharing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Welcome to Notes Sharing</h1>
+        <p>Select your class to explore study materials:</p>
+        <div class="buttons">
+            <button onclick="showContent('class11')">Class 11</button>
+            <button onclick="showContent('class12')">Class 12</button>
+            <button class="creator-btn" onclick="showCreator()">Creator</button>
+        </div>
+    </div>
+
+    <div id="content" class="content">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <h2 id="class-title"></h2>
+        <div id="subjects"></div>
+    </div>
+
+    <div id="subject-content" class="content">
+        <button class="back-btn" onclick="goBackToSubjects()">← Back to Subjects</button>
+        <h2 id="subject-title"></h2>
+        <iframe id="google-frame" src="" frameborder="0"></iframe>
+    </div>
+
+    <div id="creator-popup" class="popup">
+        <div class="popup-content">
+            <p>👨‍💻 Created by: <b>Ankit K. Yadav</b></p>
+            <p>🏫 College: CCRC</p>
+            <p>📌 Section: P11</p>
+            <button onclick="closeCreator()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
